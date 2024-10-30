@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-add-teacher',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './add-teacher.component.html',
   styleUrl: './add-teacher.component.css'
 })
-export class AddTeacherComponent {
+export class AddTeacherComponent implements OnInit{
+  form! :FormGroup;
+
+  ngOnInit(): void {
+    this.form = new FormGroup({
+
+    })
+  }
+
 
 }

@@ -5,11 +5,12 @@ body {
   font-family: "Archivo Black", sans-serif;
   font-weight: 900;
   font-style: normal;
-  background-color: #555;
+  background: linear-gradient(135deg, #4b0082, #8a2be2);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #fff; /* Couleur du texte blanche pour contraste */
 }
 
 .login-container {
@@ -17,11 +18,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 2000px;
+  width: 100%;
 }
 
 .login-box {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9); /* Légèrement transparent pour voir le fond */
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -30,38 +31,37 @@ body {
   width: 100%;
 }
 
-
-
-.logo h2 {
+.logo-container h2 {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #4b0082; /* Couleur violet foncé */
 }
 
 form input[type="text"], form input[type="password"] {
   width: 300px;
   padding: 10px;
   margin-bottom: 15px;
-  border: 2px solid #555555;
+  border: 2px solid #8a2be2;
   border-radius: 5px;
   font-size: 16px;
+  color: #333;
 }
 
 form button {
   width: 320px;
   padding: 10px;
-  background-color: #555555;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 form button:hover {
-  background-color: #555;
+  background: linear-gradient(135deg, #7a1ac4, #5a0088);
 }
 
 .logo-container {
@@ -70,26 +70,26 @@ form button:hover {
 }
 
 .logo-container img {
-  margin-right: 10px; /* Ajustez l'espace entre l'image et le texte si nécessaire */
+  margin-right: 10px; /* Ajuste l'espace entre l'image et le texte si nécessaire */
 }
 
 .logo-container h2 {
   margin: 0; /* Supprime le margin par défaut du h2 pour un meilleur alignement */
 }
+
 .button {
-  width: 1000px;
+  width: 100%;
   padding: 10px;
-  background-color: #555555;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: #555;
+  background: linear-gradient(135deg, #7a1ac4, #5a0088);
 }
-

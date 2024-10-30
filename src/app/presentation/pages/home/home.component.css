@@ -6,11 +6,12 @@ body {
   font-style: normal;
   display: flex;
   height: 100vh;
-  background-color: #E0E0E0;
+  background: linear-gradient(135deg, #4b0082, #8a2be2); /* Dégradé violet */
+  color: #fff; /* Texte en blanc pour contraste */
 }
 
 .sidebar {
-  background-color: #E0E0E0;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
   width: 250px;
   padding: 20px;
   display: flex;
@@ -22,16 +23,19 @@ body {
 .logo {
   text-align: center;
   display: flex;
+  align-items: center;
+  color: #fff; /* Couleur blanche pour contraste */
 }
 
 .logo img {
   width: 50px;
   height: 50px;
+  margin-right: 10px;
 }
 
 .logo h2 {
-  margin-top: 10px;
-  color: #333;
+  margin: 0;
+  color: #fff;
 }
 
 .menu {
@@ -43,8 +47,15 @@ body {
 .menu li {
   margin-bottom: 20px;
   font-size: 18px;
-  color: #555;
+  color: #dddddd;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu li.active,
+.menu li:hover {
+  color: #ffffff; /* Blanc pour le survol et l'élément actif */
+  font-weight: bold;
 }
 
 .icon {
@@ -53,20 +64,27 @@ body {
 
 .logout {
   margin-top: auto;
-  color: #333;
+  color: #fff;
   cursor: pointer;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logout:hover {
+  color: #dddddd;
 }
 
 .main-content {
   flex: 1;
   padding: 40px;
+  background-color: #f3f3f3; /* Couleur plus claire pour contraste */
+  color: #333;
 }
 
 h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #4b0082;
 }
 
 .stats-grid {
@@ -86,12 +104,12 @@ h1 {
 .stat-box h3 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #333;
+  color: #4b0082; /* Violet foncé */
 }
 
 .stat-box p {
   font-size: 32px;
-  color: #000;
+  color: #333;
 }
 
 .stat-box canvas {
@@ -100,16 +118,7 @@ h1 {
   display: block;
 }
 
-.menu li.active,
-.menu li:hover,
-.menu li.active a,
-.menu li:hover a {
-  color: #000;
-  font-weight: bold;
-}
-
 .menu a {
   text-decoration: none;
-  color: #555555;
+  color: inherit;
 }
-

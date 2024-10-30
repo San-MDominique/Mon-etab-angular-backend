@@ -1976,6 +1976,35 @@ var DomHandler = class _DomHandler {
                 [contenteditable]:not([tabIndex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector}`) : false;
   }
 };
+var ConnectedOverlayScrollHandler = class {
+  element;
+  listener;
+  scrollableParents;
+  constructor(element, listener = () => {
+  }) {
+    this.element = element;
+    this.listener = listener;
+  }
+  bindScrollListener() {
+    this.scrollableParents = DomHandler.getScrollableParents(this.element);
+    for (let i = 0; i < this.scrollableParents.length; i++) {
+      this.scrollableParents[i].addEventListener("scroll", this.listener);
+    }
+  }
+  unbindScrollListener() {
+    if (this.scrollableParents) {
+      for (let i = 0; i < this.scrollableParents.length; i++) {
+        this.scrollableParents[i].removeEventListener("scroll", this.listener);
+      }
+    }
+  }
+  destroy() {
+    this.unbindScrollListener();
+    this.element = null;
+    this.listener = null;
+    this.scrollableParents = null;
+  }
+};
 
 // node_modules/primeng/fesm2022/primeng-ripple.mjs
 var Ripple = class _Ripple {
@@ -2333,13 +2362,16 @@ export {
   zindexutils,
   ConfirmEventType,
   ConfirmationService,
+  FilterService,
   MessageService,
+  OverlayService,
   PrimeNGConfig,
   Footer,
   PrimeTemplate,
   SharedModule,
   TranslationKeys,
   DomHandler,
+  ConnectedOverlayScrollHandler,
   BaseIcon,
   Ripple,
   RippleModule,
@@ -2355,4 +2387,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-L5S55WB7.js.map
+//# sourceMappingURL=chunk-TPCYWHAQ.js.map

@@ -6,11 +6,11 @@ body {
   font-style: normal;
   display: flex;
   height: 100vh;
-  background-color: #E0E0E0;
+  background-color: #f5f5f5; /* Fond doux */
 }
 
 .sidebar {
-  background-color: #E0E0E0;
+  background-color: #3a506b; /* Bleu-gris doux */
   width: 250px;
   padding: 20px;
   display: flex;
@@ -22,13 +22,12 @@ body {
 .logo {
   text-align: center;
   display: flex;
+  align-items: center;
+  color: #ffffff;
 }
-
-
 
 .logo h2 {
   margin-top: 10px;
-  color: #333;
 }
 
 .menu {
@@ -40,11 +39,16 @@ body {
 .menu li {
   margin-bottom: 20px;
   font-size: 18px;
-  color: #555;
+  color: #d1d1d1;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-
+.menu li.active,
+.menu li:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
 
 .icon {
   margin-right: 10px;
@@ -52,20 +56,27 @@ body {
 
 .logout {
   margin-top: auto;
-  color: #333;
+  color: #ffffff;
   cursor: pointer;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logout:hover {
+  color: #d1d1d1;
 }
 
 .main-content {
   flex: 1;
   padding: 40px;
+  background-color: #ffffff; /* Contraste doux pour le contenu principal */
+  color: #333;
 }
 
 h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #3a506b;
 }
 
 .stats-grid {
@@ -87,15 +98,17 @@ header {
 
 header h1 {
   margin: 0;
+  color: #3a506b;
 }
 
 .add-student {
-  background-color: #E0E0E0;
-  font-weight: bolder;
-  color: #333333;
+  background-color: #3a506b;
+  font-weight: bold;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .table-section {
@@ -105,13 +118,13 @@ header h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 thead {
-  background-color: #1F1F1F;
-  color: #fff;
+  background-color: #3a506b;
+  color: #ffffff;
 }
 
 th, td {
@@ -129,25 +142,25 @@ td {
 }
 
 .edit-btn {
-  background-color: #f39c12;
-  color: #fff;
+  background-color: #3a506b;
+  color: #ffffff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   margin-right: 5px;
+  border-radius: 3px;
 }
 
 .delete-btn {
   background-color: #e74c3c;
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+  border-radius: 3px;
 }
-/*modal*/
 
-
-/* Styles pour le modal */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -161,7 +174,7 @@ td {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -170,17 +183,9 @@ td {
   text-align: center;
 }
 
-.modal-header {
-  margin-bottom: 20px;
-}
-
 .modal-header h2 {
   margin: 0;
-  color: #e74c3c;
-}
-
-.modal-body {
-  margin-bottom: 20px;
+  color: #3a506b;
 }
 
 .modal-footer {
@@ -195,14 +200,13 @@ td {
   border-radius: 5px;
 }
 
-.yes-btn {
-  background-color: #E0E0E0;
-  color: black;
-}
-
-.no-btn {
-  background-color: #E0E0E0;
-  color: black;
+.yes-btn, .no-btn {
+  background-color: #3a506b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .close {
@@ -219,24 +223,7 @@ td {
   cursor: pointer;
 }
 
-.menu li.active,
-.menu li:hover,
-.menu li.active a,
-.menu li:hover a {
-  color: #000;
-  font-weight: bold;
-}
-
-.menu a {
+.menu a, .logout a, .header a {
   text-decoration: none;
-  color: #555555;
+  color: inherit;
 }
-.header a {
-  text-decoration: none;
-  color: #1F1F1F;
-}
-.logout a {
-  text-decoration: none;
-  color: #1F1F1F;
-}
-
